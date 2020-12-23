@@ -1,7 +1,7 @@
 ﻿using System;
 namespace DesignPatterns.Observer
 {
-    public class AuctionLog : IAuctionListener
+    public class AuctionLog : IAuctionObserver
     {
         public void BidSet(int bid)
         {

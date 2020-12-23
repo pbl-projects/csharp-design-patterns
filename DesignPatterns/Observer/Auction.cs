@@ -5,21 +5,21 @@ namespace DesignPatterns.Observer
 {
     public class Auction
     {
-        public List<IAuctionListener> AuctionListeners { get; set; }
+        public List<IAuctionObserver> AuctionObservers { get; set; }
 
         public Auction()
         {
-            AuctionListeners = new List<IAuctionListener>();
+            AuctionObservers = new List<IAuctionObserver>();
         }
 
-        public void AddAuctionListener(IAuctionListener Listener)
+        public void AddAuctionListener(IAuctionObserver Listener)
         {
-            AuctionListeners.Add(Listener);
+            AuctionObservers.Add(Listener);
         }
 
-        public void RemoveAuctionListener(IAuctionListener Listener)
+        public void RemoveAuctionListener(IAuctionObserver Listener)
         {
-            AuctionListeners.Remove(Listener);
+            AuctionObservers.Remove(Listener);
         }
 
         public void DoBid()
@@ -28,9 +28,9 @@ namespace DesignPatterns.Observer
             Console.Write("Bid: ");
             bid = Int32.Parse(Console.ReadLine());
 
-            foreach(IAuctionListener Listener in AuctionListeners)
+            foreach(IAuctionObserver Observer in AuctionObservers)
             {
-                Listener.BidSet(bid);
+                Observer.BidSet(bid);
             }
         }
     }
