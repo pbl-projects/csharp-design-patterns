@@ -8,6 +8,7 @@
   <ItemGroup>
     <Folder Include="Strategy\" />
     <Folder Include="Observer\" />
+    <Folder Include="Facade\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="README.md" />
