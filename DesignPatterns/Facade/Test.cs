@@ -5,6 +5,7 @@ namespace DesignPatterns.Facade
     {
         public Test()
         {
+            Console.WriteLine("TEST");
         }
     }
 }
