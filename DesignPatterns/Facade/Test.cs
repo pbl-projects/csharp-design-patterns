@@ -7,9 +7,7 @@ namespace DesignPatterns.Facade
         {
 
             int a = 10;
-            int b = 12;
 
-            Console.WriteLine("TEST");
 
         }
     }
